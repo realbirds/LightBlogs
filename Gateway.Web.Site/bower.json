@@ -1,0 +1,7 @@
+{
+  "name": "light-blogs",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.12.3"
+  }
+}

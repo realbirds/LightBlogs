@@ -3,3 +3,7 @@
 ################################################################################
 
 /Gateway.Web.Site/node_modules
+/Gateway.Web.Site/bin
+/Gateway.Web.Site/obj
+/Gateway.Web.Site/Properties/PublishProfiles
+/Gateway.Web.Site/wwwroot/lib/jquery
