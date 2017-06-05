@@ -3,6 +3,15 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.7": {
+      "GreenPipes/1.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net452/GreenPipes.dll": {}
+        },
+        "runtime": {
+          "lib/net452/GreenPipes.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -41,6 +50,20 @@
             "assetType": "native",
             "rid": "win7-x86"
           }
+        }
+      },
+      "MassTransit/3.5.7": {
+        "type": "package",
+        "dependencies": {
+          "GreenPipes": "1.0.9",
+          "NewId": "3.0.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net452/MassTransit.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MassTransit.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/1.1.2": {
@@ -1177,6 +1200,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "NewId/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/NewId.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NewId.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -2005,6 +2037,17 @@
     }
   },
   "libraries": {
+    "GreenPipes/1.0.9": {
+      "sha512": "K1XcQp2vkyCSG5ykMJbBLD6kQ8i8HMWl1axmMYZaVkzzs3iDHPsREQiFHmcFanLIpj8uafUQQt7kTDEqerzp4Q==",
+      "type": "package",
+      "path": "GreenPipes/1.0.9",
+      "files": [
+        "GreenPipes.1.0.9.nupkg.sha512",
+        "GreenPipes.nuspec",
+        "lib/net452/GreenPipes.XML",
+        "lib/net452/GreenPipes.dll"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -2021,6 +2064,18 @@
         "runtimes/win7-arm/native/libuv.dll",
         "runtimes/win7-x64/native/libuv.dll",
         "runtimes/win7-x86/native/libuv.dll"
+      ]
+    },
+    "MassTransit/3.5.7": {
+      "sha512": "CUlh2bUZtC55pbvYQtRpN8eUN8F6QYzvEAiEA1CxXcBeLDOxvBcxeKP1H8lyDc5w+E/dI/7MgA/LmsPnIAbiNw==",
+      "type": "package",
+      "path": "MassTransit/3.5.7",
+      "files": [
+        "MassTransit.3.5.7.nupkg.sha512",
+        "MassTransit.nuspec",
+        "lib/net452/MassTransit.XML",
+        "lib/net452/MassTransit.dll",
+        "lib/net452/MassTransit.pdb.srcsrv"
       ]
     },
     "Microsoft.AspNetCore.Antiforgery/1.1.2": {
@@ -2996,6 +3051,16 @@
         "NETStandard.Library.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt"
+      ]
+    },
+    "NewId/3.0.0": {
+      "sha512": "9Bg4A+nppzDg4rz/dxv1VO7rWaRKiRJ1GblpXYuMVGpqypaJGO25deq9p0DjIEXjmgTBO7S02i5isNPcQyIvKA==",
+      "type": "package",
+      "path": "NewId/3.0.0",
+      "files": [
+        "NewId.3.0.0.nupkg.sha512",
+        "NewId.nuspec",
+        "lib/net452/NewId.dll"
       ]
     },
     "Newtonsoft.Json/9.0.1": {
@@ -6194,6 +6259,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "MassTransit >= 3.5.7",
       "Microsoft.AspNetCore.Diagnostics >= 1.1.2",
       "Microsoft.AspNetCore.Mvc >= 1.1.3",
       "Microsoft.AspNetCore.Server.IISIntegration >= 1.1.2",
